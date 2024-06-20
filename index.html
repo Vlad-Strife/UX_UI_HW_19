@@ -1,52 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css" type="text/css">
     <title>My UX Skills</title>
-
 </head>
+
 <body class="background">
-    <div class="header">
-        <div class="header-title">My UX Skills</div>
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="header-title">My UX Skills</h1>
         <img src="images/Group 3.png" alt="Centered Image" class="center-image">
-    </div>
-    <div class="projects-title">My Projects</div>
+    </header>
+
+    <!-- Projects Title -->
+    <section class="projects-title-section">
+        <h2 class="projects-title">My Projects</h2>
+    </section>
+
+    <!-- Projects Container -->
     <div class="container">
+        <!-- Project 1 -->
         <div class="box">
             <div class="left">
-                <img src="images/Rectangle 23.png" alt="Image Placeholder">
+                <img src="images/Rectangle 23.png" alt="HORIZON Project Image" class="project-image">
             </div>
             <div class="right">
-                <div class="title">HORIZON</div>
-                <div class="subhead">Research, UX Design, Testing</div>
-                <div class="body-text">Ensure usability, address accessibility requirements, and deliver a delightful solution.</div>
+                <h3 class="title">HORIZON</h3>
+                <p class="subhead">Research, UX Design, Testing</p>
+                <p class="body-text">Ensure usability, address accessibility requirements, and deliver a delightful solution.</p>
                 <button class="view-project-btn">View Project</button>
             </div>
         </div>
+
+        <!-- Project 2 -->
         <div class="box">
             <div class="left">
-                <img src="images/Rectangle 24A.png" alt="Image Placeholder">
+                <img src="images/Rectangle 24A.png" alt="BREWED AWAKENING Project Image" class="project-image">
             </div>
             <div class="right">
-                <div class="title">BREWED AWAKENING</div>
-                <div class="subhead">Research, UX Design, Product Design, Testing</div>
-                <div class="body-text">Ensure usability, address accessibility requirements, and deliver a delightful solution.</div>
+                <h3 class="title">BREWED AWAKENING</h3>
+                <p class="subhead">Research, UX Design, Product Design, Testing</p>
+                <p class="body-text">Ensure usability, address accessibility requirements, and deliver a delightful solution.</p>
                 <button class="view-project-btn">View Project</button>
             </div>
         </div>
+
+        <!-- Project 3 -->
         <div class="box">
             <div class="left">
-                <img src="images/Rectangle 25.png" alt="Image Placeholder">
+                <img src="images/Rectangle 25.png" alt="SISTERS OF THE HOOD Project Image" class="project-image">
             </div>
             <div class="right">
-                <div class="title">SISTERS OF THE HOOD</div>
-                <div class="subhead">UX/ UI Design, Web Design, Testing</div>
-                <div class="body-text">Ensure usability, address accessibility requirements, and deliver a delightful solution.</div>
+                <h3 class="title">SISTERS OF THE HOOD</h3>
+                <p class="subhead">UX/ UI Design, Web Design, Testing</p>
+                <p class="body-text">Ensure usability, address accessibility requirements, and deliver a delightful solution.</p>
                 <button class="view-project-btn">View Project</button>
             </div>
         </div>
     </div>
+
+    <!-- jQuery Script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".view-project-btn").hover(
+                function() {
+                    $(this).css("background-color", "rgb(100, 10, 140)");
+                }, function() {
+                    $(this).css("background-color", "hsla(0, 0%, 0%, 0.75)");
+                }
+        );
+
+        $(".view-project-btn").click(function() {
+            $(this).addClass("click-animation");
+            setTimeout(() => {
+                $(this).removeClass("click-animation");
+            }, 300); // Duration of the animation
+        });
+    });
+    </script>
 </body>
+
 </html>
